@@ -10,7 +10,7 @@ def multi_print2(name, count):
 
 def start_Function():
     multi_print("Daniel", 10)
-    multi_print("Wolf", 10)
+    multi_print("Wolf Test", 10)
     print(multi_print2("Daniel", 5))
 
 start_Function()
