@@ -12,6 +12,8 @@ def main():
     #print(clearDict(woerter))
     #print(updateDict(woerter2, "name", "Mizi"))
     
+    delKeyAndValueFromDict("cat", woerter)
+
     iterateAndPrintKeyFromDict(woerter)
     iterateAndPrintValueFromDict(woerter)
 
@@ -23,6 +25,8 @@ def printout_CompleteDict(affected_Dict):
     print(affected_Dict)
 
 def return_SingleWord(affected_Dict, vS_Key):
+    # affected_Dict.Get(vS_Key) liefert das gleiche zurück, wenn der Key nicht gefunden wird kommt hier ein "none" zurück
+    # wenn bei der eckigen Schreibweise der Key nicht gefunden wird, dann bricht das Programm hart ab mit einer Fehlermeldung
     return affected_Dict[vS_Key]
 
 def checkIfWordIsInDict(affected_Dict, vS_Key):
@@ -54,5 +58,8 @@ def iterateAndPrintValueFromDict(affected_Dict):
     #Ausgabe "Haus, Katze, Schwarz"
     for key in affected_Dict.values():
         print(key)
+
+def delKeyAndValueFromDict(affectedKey, affected_Dict):
+    del affected_Dict[affectedKey]
 
 main()
