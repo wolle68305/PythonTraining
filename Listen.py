@@ -1,3 +1,5 @@
+#Liste ist eine veränderliche Datenstruktur
+
 def start_main():
     liste1 = []
     liste2 = [] 
