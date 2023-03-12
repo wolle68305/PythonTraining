@@ -3,6 +3,7 @@ def main():
     print(substring_Function(vS_Text))
     print(substring_Function2(vS_Text))
     print(substring_Function3(vS_Text))
+    print(partOfTheString(vS_Text))
 
 def substring_Function(vS_Text):
     #Ausgabe "Hallo"
@@ -17,6 +18,10 @@ def substring_Function2(vS_Text):
 def substring_Function3(vS_Text):
     #Ausgabe "Hallo Welt"
     return vS_Text[:]
+
+def partOfTheString(vS_Text):
+    #Ausgabe a
+    return vS_Text[1]
 
 main()
 
