@@ -16,6 +16,7 @@ def main():
 
     iterateAndPrintKeyFromDict(woerter)
     iterateAndPrintValueFromDict(woerter)
+    iterateAndPrintKeyAndValueFromDict(woerter)
 
 def create_Dict(affected_Dict):
     affected_Dict = {"house" : "Haus", "cat" : "Katze", "black" : "Schwarz"}
@@ -61,5 +62,9 @@ def iterateAndPrintValueFromDict(affected_Dict):
 
 def delKeyAndValueFromDict(affectedKey, affected_Dict):
     del affected_Dict[affectedKey]
+
+def iterateAndPrintKeyAndValueFromDict(affected_Dict):
+    for key, value in affected_Dict.items():
+        print(key + ":" + value)
 
 main()
