@@ -14,6 +14,8 @@ def start_main():
     #print(list_slicing3(liste1))
     print(list_comprehensions(liste1,liste2))
     print(list_comprehensions2(liste1,liste2))
+    list_multidimensional()
+
 
 def fill_List(liste1):
     liste1 = ["gut", "hilfreich", "besser", "optimal"]
@@ -61,6 +63,29 @@ def list_comprehensions(liste1 , liste2):
 
 def list_comprehensions2(liste1, liste2):
     return [x * x for x in liste1]
+
+def list_multidimensional():
+    #mehrdimensionale Liste
+    liste3 = [
+        ["Berlin", "München", "Köln"],
+        ["Budapest", "Pecs", "Sopron"]
+    ]
+
+    #Ausgabe von Teil1
+    part1 = liste3[0]
+
+    #Ausgabe Berlin von Teil1
+    city1 = liste3[0][0]
+
+def listsInDictionaries():
+    #Listen in Dictionaries
+    students = {
+        "Informatik": ["Max", "Monika"],
+        "BWL": ["Erik", "Franziska"]
+    }
+
+    #Ausgabe von Liste Informatik -> Ausgabe lautet Max und Monika
+    print(students["Informatik"])
 
 
 start_main()
