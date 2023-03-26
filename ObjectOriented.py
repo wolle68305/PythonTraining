@@ -11,7 +11,10 @@ def startMain():
         function3() 
 
     if int(functionChoice) == 4:
-        function4()         
+        function4()
+
+    if int(functionChoice) == 5:
+        function5()             
 
 def function1():
     erik = Student()
@@ -45,6 +48,11 @@ def function4():
     erik.increaseTerm(5)
     erik.name() 
 
+def function5():
+    #Konstruktor Aufruf
+    erik = Student2("Erik", "Mustermann")
+    erik.increaseTerm(5)
+    print("Der Rückgabewert der Methode get_term lautet: " + erik.get_term()) 
 
 
 class Student():
@@ -56,14 +64,24 @@ class Student2():
     def __init__(self, firstName, lastName):
         self.firstName = firstName
         self.lastName = lastName
-        self.term = 1
+        #Doppelter Unterstrich bedeutet dass die Eigenschaft privat ist und man kann nur noch innerhalb der Klasse auf "term" zugreifen
+        self.__term = 1
 
     def name(self):
-        print(self.firstName + " " + self.lastName + " (Semester : " + str(self.term) + ")")
+        print(self.firstName + " " + self.lastName + " (Semester : " + str(self.__term) + ")")
 
     def increaseTerm(self, increaseNumber):
         #Methode zur Erhöhung des Semesters
-        self.term = self.term + increaseNumber    
+        #Doppelter Unterstrich bedeutet dass die Eigenschaft privat ist und man nicht mehr von außen zugreifen kann
+        self.__term = self.__term + increaseNumber    
+
+    def get_term(self):
+        #Getter Methode zum Erhalt der Term Eigenschaft
+        return str(self.__term)
+    
+    def __do_something(self):
+        #private Methode, die nur innerhalb der Klasse aufrufbar ist
+        pass
 
 class Company():
     def name(self):
