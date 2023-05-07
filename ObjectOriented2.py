@@ -24,6 +24,7 @@ class PhoneBook():
     def __str__(self):
          #Diese Funktion wird mit dem Befehl "print(book)" in der main() Methode aufgerufen
          #Alternative zum Debuggen
+         #self.__entries = gibt die Einträge von dem Dictionary self, also in dem Falle book, zurück
          return "PhoneBook(" + str(self.__entries) + ")"  
 
     def __repr__(self):
