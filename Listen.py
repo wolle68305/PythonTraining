@@ -4,18 +4,19 @@ def start_main():
     liste1 = []
     liste2 = [] 
     #liste1 = fill_List(liste1)
-    liste1  = fill_List2(liste1)
+    #liste1  = fill_List2(liste1)
     #Ausgaben der Ergebnisse der Funktionen
-    print_List(liste1)
+    #print_List(liste1)
     #print(return_LastListElement(liste1))
     #print(return_FirstListElement(liste1))
     #print(list_slicing1(liste1))
     #print(list_slicing2(liste1))
     #print(list_slicing3(liste1))
-    print(list_comprehensions(liste1,liste2))
-    print(list_comprehensions2(liste1,liste2))
-    list_multidimensional()
-
+    #print(list_comprehensions(liste1,liste2))
+    #print(list_comprehensions2(liste1,liste2))
+    #list_multidimensional()
+    #listMutable()
+    listFor()
 
 def fill_List(liste1):
     liste1 = ["gut", "hilfreich", "besser", "optimal"]
@@ -87,5 +88,48 @@ def listsInDictionaries():
     #Ausgabe von Liste Informatik -> Ausgabe lautet Max und Monika
     print(students["Informatik"])
 
+
+def listMutable():
+    names = [
+        'Moritz Müller',
+        'Erika Mustermann',
+        'Tobias M.'
+    ]
+
+    print(names)
+    #ergänzt Isabel Müller zu der Liste Names
+    names.append("Isabel Müller")
+    print(names)
+
+    #ersetzt Erika Mustermann durch Daniel Wolf
+    names[1] = "Daniel Wolf"
+    print(names)
+
+    #entfernt Tobias M. aus der Liste
+    names.remove("Tobias M.")
+    print(names)
+
+    #Alternative zu Remove ist del
+    del names[1]
+    print(names)
+
+    #Länge der Liste
+    print(len(names))
+
+def listFor():
+    names = [
+        'Moritz Müller',
+        'Erika Mustermann',
+        'Tobias M.'
+    ]
+
+    #Variante 1
+    for i in range(0,len(names)):
+        print(names[i])
+
+    #Variante 2
+    for name in names:
+        #print(name)
+        print("Einladung an: " + name)   
 
 start_main()
