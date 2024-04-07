@@ -9,6 +9,8 @@ def main():
     #method3(pathToFile)
     #method4(pathToFile)
     #method5(pathToFile)
+    #method6(pathToFile, "TestFile.txt")
+    method7(pathFolderJoiner(), "TestFile.txt")
     #getCurrentFolderLocation()
     #pathJoiner()
     
@@ -45,7 +47,19 @@ def method4(pathToFile):
 
 def method5(pathToFile):
     with open(pathToFile, 'r') as file:
-        print(file.read())            
+        print(file.read())   
+
+def method6(pathToFile):
+    #Textdatei erweitern mit 'a' = Append
+    with open(pathToFile, 'a', encoding='utf-8') as file:
+       file.write("Max Mustermann")                 
+    method2(pathToFile)
+
+def method7(pathToFolder, fileName):
+    #Textdatei wird erstellt, wenn diese noch nicht existiert
+    with open(pathToFolder + "/" + fileName, 'w', encoding='utf-8') as file:
+       file.write("Max Mustermann")                 
+    method2(pathToFolder + "/" + fileName)
 
 def getCurrentFolderLocation():
     print(os.getcwd())
@@ -55,5 +69,13 @@ def pathJoiner() -> str:
     #diese Methode setzt dann abhängig vom OS automatisch ein / oder ein \ ein
     #print(os.path.join('/home' ,'daniel', 'TransferSynology', 'Python Training' , 'gaeste.txt'))
     return os.path.join('/home' ,'daniel', 'TransferSynology', 'Python Training' , 'gaeste.txt')
+
+def pathFolderJoiner() -> str:
+    #liefert den Pfad des Ordners zurück
+    #verbindet einen Path als Zeichenkette (z.B. wenn ein Unterordner existiert)
+    #diese Methode setzt dann abhängig vom OS automatisch ein / oder ein \ ein
+    #print(os.path.join('/home' ,'daniel', 'TransferSynology', 'Python Training' , 'gaeste.txt'))
+    return os.path.join('/home' ,'daniel', 'TransferSynology', 'Python Training')
+
 
 main()
