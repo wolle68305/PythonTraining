@@ -1,0 +1,2 @@
+def weltAusgabe():
+    print("Welt")
