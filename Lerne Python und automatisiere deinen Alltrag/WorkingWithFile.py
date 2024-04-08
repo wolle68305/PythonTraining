@@ -61,6 +61,17 @@ def method7(pathToFolder, fileName):
        file.write("Max Mustermann")                 
     method2(pathToFolder + "/" + fileName)
 
+def getCurrentFileInformation():
+    #gibt Informationen über die aktuelle Datei zurück, z.B. der Pfad
+    
+    #gibt den Ordner aus, in dem die aktuelle Datei liegt
+    folder = os.path.dirname(__file__)
+    print(folder)
+
+    #gibt den Pfad zu der aktuellen Datei zurück
+    print(__file__)
+
+
 def getCurrentFolderLocation():
     print(os.getcwd())
 
