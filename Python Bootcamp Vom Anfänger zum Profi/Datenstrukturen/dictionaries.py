@@ -12,11 +12,12 @@ def main():
     #print(clearDict(woerter))
     #print(updateDict(woerter2, "name", "Mizi"))
     
-    delKeyAndValueFromDict("cat", woerter)
+    #delKeyAndValueFromDict("cat", woerter)
 
-    iterateAndPrintKeyFromDict(woerter)
-    iterateAndPrintValueFromDict(woerter)
-    iterateAndPrintKeyAndValueFromDict(woerter)
+    #iterateAndPrintKeyFromDict(woerter)
+    #iterateAndPrintValueFromDict(woerter)
+    #iterateAndPrintKeyAndValueFromDict(woerter)
+    countSameLetters()
 
 def create_Dict(affected_Dict):
     affected_Dict = {"house" : "Haus", "cat" : "Katze", "black" : "Schwarz"}
@@ -66,5 +67,17 @@ def delKeyAndValueFromDict(affectedKey, affected_Dict):
 def iterateAndPrintKeyAndValueFromDict(affected_Dict):
     for key, value in affected_Dict.items():
         print(key + ":" + value)
+
+def countSameLetters():
+    #zählt die gleichen Buchstaben zusammen in einem Dictionary
+    text = "A A A A A B B B B B C C C C C D D D D D E E E E E E E"
+    d= {}
+
+    for word in text.split(" "):
+        if word in d:
+           d[word] = d[word] + 1     
+        else:
+            d[word] = 1
+    print(d)
 
 main()
