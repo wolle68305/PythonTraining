@@ -3,7 +3,7 @@ def main():
     #methode2()
     methode3()
 
-
+# %%
 def methode1():
     l = ["Max", "Monika", "Erik", "Franziska"]
 
