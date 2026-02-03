@@ -1,3 +1,3 @@
 def weltAusgabe2():
     print("Welt")
-    print("Welt2")
+    print("Welt4")
