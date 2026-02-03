@@ -1,6 +1,6 @@
 import yfinance, json
 
-symbol = 'MSF.DE'
+symbol = 'NEM'
 microsoft = yfinance.Ticker(symbol)
 daten = microsoft.info
 #print(json.dumps(daten, indent=4))
