@@ -30,14 +30,15 @@ def pathFolderJoiner() -> str:
     #verbindet einen Path als Zeichenkette (z.B. wenn ein Unterordner existiert)
     #diese Methode setzt dann abhängig vom OS automatisch ein / oder ein \ ein
     #print(os.path.join('/home' ,'daniel', 'TransferSynology', 'Python Training' , 'gaeste.txt'))
-    #return os.path.join(os.sep,'Users', 'WolfD24', 'OneDrive - BASF') 
-    return os.path.join('B:','GLOBAL','0074-BBS','LUDWIGSHAFEN','GS','GS-H','ZLB-R-GROUPS-Per','8 Personnel Controlling')
+    #return os.path.join("PFAD")
+    return "Test"
 
 def pathFileJoiner() -> str:
     #liefert den Pfad des Ordners zurück
     #verbindet einen Path als Zeichenkette (z.B. wenn ein Unterordner existiert)
     #diese Methode setzt dann abhängig vom OS automatisch ein / oder ein \ ein
     #print(os.path.join('/home' ,'daniel', 'TransferSynology', 'Python Training' , 'gaeste.txt'))
-    return os.path.join(os.sep,'Users', 'WolfD24', 'OneDrive - BASF','Desktop','Folder Lister Python.csv') 
+    #return os.path.join("PFAD")
+    return "Test"
 
 main()
